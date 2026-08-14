@@ -17,8 +17,8 @@ public class SensorService {
     private final SensorMapper sensorMapper;
 
     public SensorResponse saveSensor(SensorDto sensor) {
-        var sensorNameAlreadyExoists = sensorRepository.existsByName(sensor.name());
-        if (sensorNameAlreadyExoists) {
+        var sensorNameAlreadyExists = sensorRepository.existsByName(sensor.name());
+        if (sensorNameAlreadyExists) {
             throw new SensorNameAlreadyExists(sensor.name());
         }
 
