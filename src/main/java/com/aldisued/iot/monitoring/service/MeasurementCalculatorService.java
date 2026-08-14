@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
-import java.util.stream.IntStream;
 
 @Service
 public class MeasurementCalculatorService {
