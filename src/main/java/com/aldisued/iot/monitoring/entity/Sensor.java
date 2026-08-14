@@ -1,6 +1,5 @@
 package com.aldisued.iot.monitoring.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -37,11 +36,9 @@ public class Sensor {
     @Column(nullable = false)
     private SensorType type;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "sensor")
     private List<SensorReading> sensorReadings = new ArrayList<>();
 
-    @JsonIgnore
     @OneToMany(mappedBy = "sensor")
     private List<Alert> alerts = new ArrayList<>();
 
